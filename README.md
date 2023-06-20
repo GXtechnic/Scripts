@@ -1,3 +1,5 @@
+![Logo](./assets/Logo.png)
+
 <br>
 
 # Welcome to our Scripts repository
