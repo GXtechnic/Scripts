@@ -9,8 +9,8 @@ $office = Read-Host "Enter Office"
 $email = Read-Host "Enter Email"
 
 # Set the Active Directory domain information
-$domain = "corp.globex.com"
-$ou = "OU=Users,DC=globex,DC=com"
+$domain = "yourdomain.com"
+$ou = "OU=Users,DC=yourdomain,DC=com"
 
 # Generate a password for the user
 $password = ConvertTo-SecureString -String "Password123" -AsPlainText -Force
@@ -21,7 +21,7 @@ Import-Module ActiveDirectory
 # Create a new user object
 $userPrincipalName = $firstName.Substring(0, 1) + $lastName + "@" + $domain
 $samAccountName = $firstName.Substring(0, 1) + $lastName
-New-ADUser -SamAccountName $samAccountName -UserPrincipalName $userPrincipalName -GivenName $firstName -Surname $lastName -DisplayName $displayName -Description $jobTitle -EmailAddress $email -Enabled $true -ChangePasswordAtLogon $true -PasswordNeverExpires $true -AccountPassword $password -PassThru | Set-ADUser -Company $company -Department $department -Title $jobTitle -Office $office -Description $jobTitle -PassThru
+New-ADUser -Name $displayName -SamAccountName $samAccountName -UserPrincipalName $userPrincipalName -GivenName $firstName -Surname $lastName -DisplayName $displayName -Description $jobTitle -EmailAddress $email -Enabled $true -ChangePasswordAtLogon $true -PasswordNeverExpires $true -AccountPassword $password -PassThru | Set-ADUser -Company $company -Department $department -Title $jobTitle -Office $office -Description $jobTitle -PassThru
 
 # Output the user's details
 Write-Host "User created successfully:"
