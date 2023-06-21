@@ -9,8 +9,8 @@ $office = Read-Host "Enter Office"
 $email = Read-Host "Enter Email"
 
 # Set the Active Directory domain information
-$domain = "yourdomain.com"
-$ou = "OU=Users,DC=yourdomain,DC=com"
+$domain = "globex.com"
+$ou = "OU=Users,DC=globex,DC=com"
 
 # Generate a password for the user
 $password = ConvertTo-SecureString -String "Password123" -AsPlainText -Force
