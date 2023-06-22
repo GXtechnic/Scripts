@@ -30,7 +30,7 @@ for ($i = 1; $i -le $userCount; $i++) {
     $password = Read-Host "Enter Password" -AsSecureString
 
     # Create a new user object
-    New-ADUser -Name $displayName -SamAccountName $samAccountName -UserPrincipalName $userPrincipalName -GivenName $firstName -Surname $lastName -DisplayName $displayName -Description $jobTitle -EmailAddress $email -Enabled $true -ChangePasswordAtLogon $true -PasswordNeverExpires $true -AccountPassword $password -Path $ou | Set-ADUser -Company $company -Department $department -Title $jobTitle -Office $office -PassThru
+    New-ADUser -Name $displayName -SamAccountName $samAccountName -UserPrincipalName $userPrincipalName -GivenName $firstName -Surname $lastName -DisplayName $displayName -Description $jobTitle -EmailAddress $email -Enabled $true -ChangePasswordAtLogon $true -PasswordNeverExpires $false -AccountPassword $password -Path $ou | Set-ADUser -Company $company -Department $department -Title $jobTitle -Office $office -PassThru
 
     # Output the user's details
     Write-Host "User created successfully:"
