@@ -4,9 +4,9 @@
 
 # Welcome to our Scripts repository
 
-This repository will contain all of the scripts and related information that we used as part of this project. The scripts included for our basic Ubuntu setup are scripts from the [Computer Setup Instructions](https://codefellows.github.io/setup-guide/). This was used as part of our lab 5 in ops-102d8.
+This repository contains all of the scripts and related scripting information that we used during this project. The scripts included for our basic Ubuntu setup are scripts from the [Computer Setup Instructions](https://codefellows.github.io/setup-guide/). These were used as part of [Code Fellows'](https://www.codefellows.org/) curriculum in [Ops-102d8 "Introduction to Computer Operations".](https://www.codefellows.org/courses/ops-102/intro-to-computer-operations/)
 
-These scripts help with efficiency and quickly being able to replicate systems, settings, etc. to our standards and practices. The included scripts were mainly used for quick setup of the Ubuntu Desktop that we are using as a server for this project as well as some of the employee user machines. It runs and installs all of the basic preferences to be up and running with virtual machines capabilities as well as remote connection enabled.
+Creating scripts increases efficiency, resulting in being able to quickly replicate systems, settings, etc. to our standards and practices. Our scripts were primarily used for configuring the automation of tasks to support Globex's Network Infrastrucutre. Automation not only reduces the time it takes to perform repetitive tasks, it also reduces errors sustained during the repeated performance of those tasks.
 
 <br>
 
